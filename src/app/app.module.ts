@@ -8,6 +8,7 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookShowComponent } from './book-show/book-show.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     BookEditComponent,
     BookDeleteComponent,
     BookShowComponent,
-
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Book } from '../books';
+import { BookService } from 'src/book.service';
+import { Book } from 'src/books';
 
 @Component({
   selector: 'app-book',
@@ -9,21 +8,31 @@ import { Book } from '../books';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  bookForm!: FormGroup;
 
-  constructor(private Router: Router, private ActivatedRoute: ActivatedRoute) { }
+  books: Book[] = [];
+  count: number = 0;
+  bookForm: any;
+  constructor(private bookService: BookService) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.bookService.getAll().subscribe(books => {
+      this.books = books;
+      this.count = this.books.length;
+    })
   }
-
-  onSubmit() {
-    let data = this.bookForm.value;
-    let book: Book = {
-      name: data.name,
-      author: data.author,
-      description: data.description,
+  check(){
+    const controls = this.bookForm.controls;
+    const invalidArr = [];
+    const validArr = [];
+    for (const count in controls) {
+      if (controls[count].status === 'INVALID') {
+         invalidArr.push(count);
+      }else{
+        validArr.push(count);
+      }
     }
+    console.log(`valid count : ${validArr.length}`)
+    console.log(`invalid count : ${invalidArr.length}`)
   }
-  
+
 }
