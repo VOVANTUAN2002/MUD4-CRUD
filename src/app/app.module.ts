@@ -9,6 +9,8 @@ import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookShowComponent } from './book-show/book-show.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    ReactiveFormsModule,//chỉ định formGroup
+    HttpClientModule //người dùng HTTp
   ],
   providers: [],
   bootstrap: [AppComponent]

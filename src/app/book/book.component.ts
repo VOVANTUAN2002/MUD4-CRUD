@@ -20,14 +20,14 @@ export class BookComponent implements OnInit {
       this.count = this.books.length;
     })
   }
-  check(){
+  check() {
     const controls = this.bookForm.controls;
     const invalidArr = [];
     const validArr = [];
     for (const count in controls) {
       if (controls[count].status === 'INVALID') {
-         invalidArr.push(count);
-      }else{
+        invalidArr.push(count);
+      } else {
         validArr.push(count);
       }
     }
