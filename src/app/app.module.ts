@@ -7,6 +7,7 @@ import { BookAddComponent } from './book-add/book-add.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookShowComponent } from './book-show/book-show.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,12 @@ import { BookShowComponent } from './book-show/book-show.component';
     BookAddComponent,
     BookEditComponent,
     BookDeleteComponent,
-    BookShowComponent
+    BookShowComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
