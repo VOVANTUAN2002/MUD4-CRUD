@@ -1,1 +1,20 @@
 <p>book-delete works!</p>
+<div class="container" style= "width: 400px;">
+    <div class="row">
+      <div class="card-header">
+        <h1 class= "card-title text-center"><b>Xóa sách</b></h1>
+      </div>
+      <div class="card-body">
+      <p> Tên sách :{{ book.name }}</p>
+      <p> Tác giả: <b>{{ book.author }}</b></p>
+      <p> Mô tả: </p>
+        <b>{{ book.description }}</b>
+      </div>
+      <div class="card-footer d-flex justify-content-end">
+        <button type="button" class="btn btn-primary" on-click= "yesBook()">Xóa sách</button>
+        <button type="button" class="btn btn-danger mx-2" on-click= "noBook()">Thoát</button>
+      </div>
+    </div>
+  </div>
+  
+  

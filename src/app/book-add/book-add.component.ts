@@ -31,6 +31,7 @@ export class BookAddComponent implements OnInit {
       description: data.description,
     }
     this.bookService.store(book).subscribe(() => {
+      alert('Thêm danh sách thành công');
       this.bookForm.reset();
       this.Router.navigate(['/books']);
     },

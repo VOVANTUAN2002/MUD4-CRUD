@@ -6,8 +6,6 @@ import { BookEditComponent } from "./book-edit/book-edit.component";
 import { BookShowComponent } from "./book-show/book-show.component";
 import { BookComponent } from "./book/book.component";
 
-
-
 const routes: Routes = [
     { path: 'books', component: BookComponent },
     { path: 'book-delete/:id', component: BookDeleteComponent },
@@ -16,9 +14,7 @@ const routes: Routes = [
     { path: 'book-add', component: BookAddComponent }
 ];
 
-
 @NgModule({
-    
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
