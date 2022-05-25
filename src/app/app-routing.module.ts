@@ -7,7 +7,7 @@ import { BookShowComponent } from "./book-show/book-show.component";
 import { BookComponent } from "./book/book.component";
 
 const routes: Routes = [
-    { path: '', component: BookComponent },
+    { path: 'books', component: BookComponent },
     { path: 'book-delete/:id', component: BookDeleteComponent },
     { path: 'book-show/:id', component: BookShowComponent },
     { path: 'book-edit/:id', component: BookEditComponent },
