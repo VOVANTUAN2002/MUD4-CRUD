@@ -1,49 +1,30 @@
-<div class="container" style= "width: 800px;">
-    <div class="row">
-      <div class="card-header">
-        <h1>Cập nhật sách</h1>
-      </div>
-      <form *ngIf= "bookForm" [formGroup]="bookForm" (ngSubmit)= "onSubmit()">
-        <div class="mb-3">
-          <label for="" class="form-label">Tên sách</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName = "name"
-          />
-          <p 
-          *ngIf="!bookForm.controls['name']?.valid && (bookForm.controls['name']?.dirty
-          ||bookForm.controls['name']?.touched)"
-          class="help-block text-danger">Vui lòng nhập tên sách</p>
-        </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Tác giả</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName = "author"
-          />
-          <p 
-          *ngIf="!bookForm.controls['author']?.valid && (bookForm.controls['author']?.dirty
-          ||bookForm.controls['author']?.touched)"
-          class="help-block text-danger">Vui lòng nhập tên tác giả</p>
-        </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Mô tả</label>
-          <textarea
-          type="text"
-          class="form-control"
-          formControlName = "description"
-        ></textarea>
-          <p 
-          *ngIf="!bookForm.controls['description']?.valid && (bookForm.controls['description']?.dirty
-          ||bookForm.controls['description']?.touched)"
-          class="help-block text-danger">Vui lòng nhập tên tác giả</p>
-        </div>
-        <button type="submit" [disabled]="!bookForm.valid" class="btn btn-success">Lưu</button>
-        <button type="button" [routerLink]="['/books']" class="btn btn-secondary">Thoát</button>
-  
-      </form>
+<div class="container" style="width: 800px;">
+  <div class="row">
+    <div class="card-header">
+      <h1>Cập nhật sách</h1>
     </div>
+    <form *ngIf="bookForm" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="" class="form-label">Tên sách</label>
+        <input type="text" class="form-control" formControlName="name" />
+        <p *ngIf="!bookForm.controls['name']?.valid && (bookForm.controls['name']?.dirty
+          ||bookForm.controls['name']?.touched)" class="help-block text-danger">Vui lòng nhập tên sách</p>
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Tác giả</label>
+        <input type="text" class="form-control" formControlName="author" />
+        <p *ngIf="!bookForm.controls['author']?.valid && (bookForm.controls['author']?.dirty
+          ||bookForm.controls['author']?.touched)" class="help-block text-danger">Vui lòng nhập tên tác giả</p>
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Mô tả</label>
+        <textarea type="text" class="form-control" formControlName="description"></textarea>
+        <p *ngIf="!bookForm.controls['description']?.valid && (bookForm.controls['description']?.dirty
+          ||bookForm.controls['description']?.touched)" class="help-block text-danger">Vui lòng nhập tên tác giả</p>
+      </div>
+      <button type="submit" [disabled]="!bookForm.valid" class="btn btn-success">Lưu</button>
+      <button type="button" [routerLink]="['/books']" class="btn btn-secondary">Thoát</button>
+
+    </form>
   </div>
-  
+</div>
