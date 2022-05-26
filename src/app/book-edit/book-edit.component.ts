@@ -7,7 +7,6 @@ import { Book } from 'src/books';
 @Component({
   selector: 'app-book-edit',
   templateUrl: './book-edit.component.html',
-  styleUrls: ['./book-edit.component.css']
 })
 export class BookEditComponent implements OnInit {
   bookForm!: FormGroup;
