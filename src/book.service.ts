@@ -13,7 +13,6 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-
   getAll(): Observable<Book[]> {
     return this.http.get<Book[]>(API_URL + '/books');
   }
@@ -33,4 +32,5 @@ export class BookService {
   show(id: any): Observable<Book> {
     return this.http.get<Book>(`${API_URL}/books/${id}`);
   }
+
 }
