@@ -24,9 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,//chỉ định formGroup
-    HttpClientModule //người dùng HTTp
+    FormsModule, // chỉ định ng FormsModule
+    ReactiveFormsModule,//chỉ định FormGroup
+    HttpClientModule //người dùng Http
   ],
   providers: [],
   bootstrap: [AppComponent]
